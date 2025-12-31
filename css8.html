@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-10">
+ <h2>CSS Flexbox</h2>
+<p>The flex box is flexible box designed to build one-dimensional 
+layouts in css layouts. One dimensional means flexbox can build
+ layout in one dimension at one time. For two-dimensional layouts, 
+we have CSS Grids that can handle both row and column </p>
+<p>Display flex is used to build flexbox. Flex can build one dimension layout 
+which is better than float based layout</p>
+
+<h4>Flexbox properties</h4>
+<p>Flex is the value of css display property. By using display flex 
+in parent elements, child elements
+ automatically align like columns with auto width and auto height</p>
+ 
+ <h2>Properties of flex container</h2>
+<h5>1. Display Flex</h5>
+<p>Display flex is the property of flex container to use flexbox. 
+CSS Display property can have value flex or inline-flex. By using
+ display flex or inline-flex 
+to parent container, the children automatically enable flex context</p>
+
+
+
+<h5>2. Flex Direction</h5>
+<p>Flex Direction property is given to flex container to 
+change direction of flex items. By default, flex direction is row.</p>
+
+
+<p>Flex Direction value</p>
+1.row(default)<br>
+2.row-reverse.<br>
+3.column<br>
+4. column-reverse<br>
+
+
+<h5>3. Flex Wrap</h5>
+<p>Flex items will by default fit in one row. flex wrap 
+is used to allow items to wrap in next line or wrap-reverse.</p>
+<p>Flex Wrap values</p>
+1.nowrap(default)<br>
+2.wrap<br>
+3.wrap-reverse<br>
+
+<h4>justify-content</h4>
+<p>justify-content property is used to justify content in main axis.
+ This can adjust items to left, center, right or add space in between</p>
+ 1.flex-start<br>
+ 2.flex-end<br>
+3. center<br>
+4. space-between<br>
+5. space-around<br>
+6. space-evenly<br>
+
+<h2>Properties of flex items</h2>
+<h5>1.order</h5>
+<p>order property of flex item set the order in which they
+ appear in parent container. The default order is 0. value of 
+ order is always a number.
+
+By default all flex items are in order of document flow</p>
+
+<h5>2.flex-grow</h5>
+<p>flex-grow property of flex item defines the growth ability. The default value for all flex items is 0.
+
+Flex-grow 0 means width of flex item as per content only.
+
+Flex-grow 1 means width of flex item will be distributed equally to all items.</p>
+
+<h5>3.Flex Shrink</h5>
+<p>Flex Shrink property of flex item defines the ability to shrink if required. The 
+default value of flex-shrink is 1. The value can be any positive value.</p>
+
+<h5>Flex Basis</h5>
+<p>flex-basis property of flex item defines the default width of item before in %age, px , em or rem. The default value of flex-basis is auto. We can assign value to flex-shrink based on the percentage required. For example, 20% means the 
+width of item will be 20%, and sum of widths of other items will be 80%
+</p>
+
+
+
+
+   <div class="col-sm-2">
+</div>   
+             
+    </div>
+    </div>
+                   
+          
+          
+</body>
+</html>

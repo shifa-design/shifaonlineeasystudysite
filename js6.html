@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2> Javascript Form Validation</h2>
+<p>JavaScript Form Validation is the process of validating form 
+data on submit. This includes validation of inputs, select, radio 
+buttons, checkbox, file, textarea etc. Validating form data on 
+client side is very important.
+
+Form Validation was the primary reason of JavaScript development. 
+Till 1995, backend servers were validating form data which took
+ around 20 seconds ( for 32kbps dialup internet speed). By
+ validating form data on client side
+ can save this time and can also reduce extra load on servers
+
+ </p> 
+  <h4>  Validate input type text</h4>
+<p>validating input type text done by checking empty textboxes or
+ characters not matching with pattern </p>
+ <h4>Name validation</h4>
+ <p>Validate name data in form</p>
+ 
+  <form name="contact">
+    <label>Name: <input type="text" name="username"></label>    
+    <button>Submit</button>
+</form>
+
+<script>
+document.contact.onsubmit=function(){
+    if(this.username.value==""){
+        alert("Enter Name");
+        this.username.focus();
+        return false;
+    }
+    else{
+        alert("Thanks " + this.username.value);
+    }
+}
+</script>           
+    
+	
+	
+&lt;form name="contact"&gt;<br>
+ &lt;label&gt;Name: &lt;input type="text" name="username"&gt;&lt;/label&gt;    
+<br>   
+   &lt;button&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;<br>
+
+&lt;script&gt;<br>
+document.contact.onsubmit=function(){<br>
+    if(this.username.value==""){<br>
+        alert("Enter Name");<br>
+        this.username.focus();<br>
+        return false;<br>
+    }<br>
+    else{<br>
+        alert("Thanks " + this.username.value);<br>
+    }<br>
+}<br>&lt;/script&gt;	<br>
+	
+<h4>Password validation</h4>
+<p>Password validation is the second most important validation. A password should not be blank and match pattern.</p>
+
+<form name="contact">
+    <label>Password: <input type="password" name="userpass"></label>    
+    <label><input type="checkbox" name="chk"> Show Password</label>    
+    <button>Submit</button>
+</form>
+
+<script>
+document.contact.chk.onchange=function(){
+    if(this.checked==true){
+        document.contact1.userpass.removeAttribute("type");
+        document.contact1.userpass.setAttribute("type","text");
+    }
+    else{
+        document.contact1.userpass.setAttribute("type","password");
+    }
+} 
+
+document.contact.onsubmit=function(){
+   var patt=/[0-9a-zA-Z]{6,12}/;
+    if(this.userpass.value==""){
+        alert("Enter Password");
+        this.userpass.focus();
+        return false;
+    }
+    else if(patt.test(this.userpass.value)==false){
+        alert("Enter valid Password");
+        this.userpass.focus();
+        return false;
+    }
+    else{
+        alert("Thanks ");
+    }
+}
+</script>
+
+
+
+
+&lt;form name="contact"&gt;<br>
+  &lt;label&gt;Password: &lt;input type="password" name="userpass"&gt;&lt;/label&gt;  <br>  
+  &lt;label&gt;input type="checkbox" name="chk"> Show Password&lt;/label&gt;    <br>
+    &lt;button&gt;Submit&lt;<br>
+	&lt;/button&gt;<br>
+&lt;/form&gt;<br>
+
+&lt;script&gt;,br>
+document.contact.chk.onchange=function(){<br>
+    if(this.checked==true){<br>
+        document.contact1.userpass.removeAttribute("type");<br>
+        document.contact1.userpass.setAttribute("type","text");<br>
+    }
+    else{
+        document.contact1.userpass.setAttribute("type","password");<br>
+    }<br>
+} <br>
+
+document.contact.onsubmit=function(){<br>
+   var patt=/[0-9a-zA-Z]{6,12}/;<br>
+    if(this.userpass.value==""){<br>
+        alert("Enter Password");<br>
+        this.userpass.focus();<br>
+        return false;<br>
+    }<br>
+    else if(patt.test(this.userpass.value)==false){<br>
+        alert("Enter valid Password");<br>
+        this.userpass.focus();<br>
+        return false;<br>
+    }<br>
+    else{<br>
+        alert("Thanks ");<br>
+    }<br>
+}<br>
+&lt;/script&gt;<br>
+
+
+<h4>Radio button validation</h4>
+<p>Radio buttons are always used in group with same name attribute. To validate radio buttons,
+ we have to check whether one of them is checked or not.</p>
+ <form name="contact">
+  <label> <input type="radio" name="gender"> : Male</label>    
+  <label> <input type="radio" name="gender"> : Female</label>    
+  <button type="reset">Reset</button>
+  <button>Submit</button>
+</form>
+
+<script>
+document.contact.onsubmit=function(){
+    if(this.gender[0].checked==false && this.gender[1].checked==false){
+        alert("Choose Gender");
+        return false;
+    }
+    else{
+        alert("Thanks ");
+    }
+}
+</script>
+
+
+
+
+
+&lt;form name="contact"&gt;<br>
+  &lt;label&gt; &lt;input type="radio" name="gender"&gt; : Male&lt;/label&gt; <br>  
+  &lt;label&gt; &lt;input type="radio" name="gender"&gt; : Female&lt;/label&gt;   <br>
+  &lt;button type="reset"&gt;Reset&lt;/button&gt;<br>
+  &lt;button&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;<br>
+
+&lt;script&gt;<br>
+document.contact.onsubmit=function(){<br>
+    if(this.gender[0].checked==false && this.gender[1].checked==false){<br>
+        alert("Choose Gender");<br>
+        return false;<br>
+    }<br>
+    else{<br>
+        alert("Thanks ");<br>
+    }<br>
+}<br>
+&lt;/script&gt;<br>
+
+
+<h4>Validate Select Dropdown</h4>
+<p>To validate select dropdown, add value attribute with blank
+ string to first option, with selected and disabled attribute.
+ If submitted value is blank string, return an error</p>
+ 
+
+<form name="contact">
+<label>
+    <select name="city">
+        <option value="" selected disabled>--Choose City--</option>
+        <option>New Delhi</option>
+        <option>Chennai</option>
+        <option>Mumbai</option>
+        <option>Kolkata</option>
+    </select>
+</label>
+  <button>Submit</button>
+</form>
+
+<script>
+document.contact.onsubmit=function(){
+    if(this.city.value==""){
+        alert("Choose City");
+        this.city.focus();
+        return false;
+    }
+    else{
+        alert("Thanks ");
+    }
+}
+</script>
+
+
+
+&lt;form name="contact"&gt;<br>
+&lt;label&gt;<br>
+    &lt;select name="city"&gt;<br>
+      &lt;option value="" selected disabled&gt;--Choose City--&lt;/option&gt;
+&lt;option&gt;New Delhi&lt;/option&gt;<br>
+        &lt;option&gt;Chennai&lt;/option&gt;<br>
+        &lt;option&gt;Mumbai&lt;/option&gt;<br>
+        &lt;option&gt;Kolkata&lt;/option&gt;<br>
+    &lt;/select&gt;<br>
+&lt;/label&gt;<br>
+  &lt;button&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;<br>
+
+&lt;script&gt;<br>
+document.contact.onsubmit=function(){<br>
+    if(this.city.value==""){<br>
+        alert("Choose City");<br>
+        this.city.focus();<br>
+        return false;<br>
+    }<br>
+    else{<br>
+        alert("Thanks ");<br>
+    }<br>
+}<br>
+&lt;/script&gt;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+    </div>
+         
+             
+    </div>
+    </div>
+                  
+             
+    </div>
+    </div>
+         
+
+
+
+
+
+
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

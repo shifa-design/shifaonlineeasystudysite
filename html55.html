@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+
+ 
+ <div class="col-sm-10">
+ <div id="web">
+<h2>Html5 web Storage</h2>
+ <p>HTML5 Web storage includes local storage and 
+ session storage. Both can store data on client side,
+ same like cookies. <br>
+ </div>
+ Type of web storage<br>
+ <div id="local">
+ <h2>1. Local Storage</h2><br>
+ <p>HTML5 Local Storage can store 5-10 mb data on 
+client side same as cookies. Local storage
+ can store data in key-value pair. Local storage data is easy to parse 
+ than cookies.
+ </p>
+ <h4 class="my-3">Add Local Storage</h4>
+ <p>To add local storage, localstorage.setItem() method is used 
+ with two parameters. First parameter is name, and second method 
+ is value. We can  also add local storage 
+ using localstorage.key=value;</p>
+ 
+&lt;script&gt;<br>
+    localStorage.name="shifa";<br>
+     localStorage.setItem("location","Noida");
+    localStorage.setItem("pincode",201301);
+&lt;/script&gt;  
+ 
+ <h4 class="my-3">Check Local Storage</h4>
+ <p>To check local storage, use localStorage.getItem()
+ method with one parameter Or localStorage.key</p>
+ &lt;script&gt;<br>
+    localStorage.name;          <br>
+     localStorage.getItem("location")   <br>
+&lt;/script&gt;<br>
+ 
+ <h4 class="my-3">Remove Local Storage</h4>
+ <p>To remove localstorage, use localStorage.removeItem() 
+ method is used with one parameter.</p>
+ &lt;script&gt;<br>
+    localStorage.removeItem("name");      <br>
+     localStorage.removeItem("location");   <br>
+&lt;/script&gt;<br>
+<h4 class="my-3">clear()</h4>
+<p>To remove all storage data</p>
+&lt;script&gt;
+    localStorage.clear();
+&lt;/script&gt;
+ </div>
+ <div  id="session">
+ <h2>2. Session Storage</h2><br>
+ <p>Session Storage can store data on client side, but 
+ only for current session. This means, once you 
+ close your web browser tab, all session storage data will be erased. Even for new tab in browser, session storage data is not accessible. Session storage data is also stored in key-valuepair. 
+ Refreshing or reloading browser tab cannot remove
+ session data.
+ 
+ <h4 class="my-3">Add Session Storage</h4>
+ <p>To add session storage, sessionStorage.setItem() method is
+ used with two parameters. First parameter is name, and second 
+ method is value.
+ We can also add session storage using
+ sessionStorage.key=value;</p>
+ &lt;script&gt;<br>
+    sessionStorage.name="shifa";
+    sessionStorage.setItem("location","Noida");<br>
+    sessionStorage.setItem("pincode",201301);<br>
+&lt;/script&gt;<br>
+<h4 class="my-3">Check Session Storage</h4>
+ <p>To check session storage, use sessionStorage.getItem()
+ method with one parameter. Or sessionStorage.key</p>
+ &lt;script&gt;<br>
+    sessionStorage.name;     <br>
+      sessionStorage.getItem("location");<br>
+    sessionStorage.getItem("pincode");  <br>
+&lt;/script&gt;<br>
+
+
+<h4 class="my-3">Remove Session Storage</h4>
+ <p>To session localstorage, use sessionStorage.removeItem() 
+ method is used with one parameter</p><br>
+ &lt;script&gt;<br>
+    sessionStorage.removeItem("name");  <br>
+    sessionStorage.removeItem("location");<br>
+&lt;/script&gt;<br>
+
+<h4 class="my-3">clear()</h4>
+
+ &lt;script&gt;<br>
+    sessionStorage.clear();<br>
+&lt;/script&gt;<br>
+
+
+
+
+</div>
+
+	 </div>
+         
+  <div class="col-sm-2" >
+  <div class="border border-3 p-2">
+        <a href="#web">Web storage</a>
+<a href="#local">Local Storage</a>
+<a href="#session">Session Storage</a>
+		
+			 </div></div>
+			 
+			 </div></div>
+          
+</body>
+</html>

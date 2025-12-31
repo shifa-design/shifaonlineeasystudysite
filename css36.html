@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>CSS3 Transition</h2>
+<p>CSS3 transition property allow css properties to change over
+ time. Transition can be used on css hover, focus, and active state
+</p>
+   <p>These properties change over a interval of time, thus 
+   looks interactive. Before css3 transition, transition effects
+   were given using javascript, or jquery. But with the
+   introduction of transitions in css3, its easier to use 
+   transitions. </p>
+<h4>Transition Properties</h4>
+ 
+ 
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Property</th>
+      <th scope="col">Value</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Transition-duration</th>
+      <td>Duration of transition, in s or ms.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Transition-delay</th>
+      <td>Delay to start transition, in s or ms.</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">Transitition-property</th>
+      <td>css property for transition. Default value is all.</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">Transitition-timing-function</th>
+      <td>linear ease, ease-in, ease-out, ease-in-out,
+	  cubic-bezier..</td>
+     
+    </tr>
+	 <tr>
+      <th scope="row">Transitition</th>
+      <td>combination oe shortcut of all transition
+	  properties in one.</td>
+     
+    </tr>
+	
+	
+  </tbody>
+  </table>
+</div>
+<h2 class="py-2">Transition Duration</h2>
+ <p>Transition Duration property set duration of transition in 
+ seconds(s) or milli-seconds(ms). For quick transition, we can 
+ set transtion duration to 0.2s or 200ms. 
+ But for longer duration, we can use 1s, 2s and so on</p>         
+             
+   <style>
+    .btn1{ transition-duration:500ms}
+    .btn1:hover{ background:red}
+    
+    .btn2{ transition-duration:1s}
+    .btn2:hover{ background:red}
+</style>
+        
+    <Button class="btn1">Button 1</Button>
+    <Button class="btn2">Button 2</Button>          
+    
+<h2 class="py-2">Transition Delay</h2>
+<p>	Transition Delay property starts transition with
+ a delay in seconds(s) or milliseconds(ms)</p>
+ <style>
+    .btn1{ transition-duration:500ms; transition-delay:500ms}
+    .btn1:hover{ background:red}
+    
+    .btn2{ transition-duration:1s; transition-delay:1s}
+    .btn2:hover{ background:red}
+</style>
+        
+    <Button class="btn1">Button 1</Button>
+    <Button class="btn2">Button 2</Button>
+   
+<h2>Transition Property</h2>
+<p>Transition property tells which css should be transitioned .
+ Default value of transition property is all.</p>
+ 
+<h4>List of CSS property to be Transitioned</h4>
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Background-color, background-position</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Border-color, border-width</th>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row">color</th>
+     
+     
+    </tr>
+    <tr>
+      <th scope="row">bottom, top, left, right</th>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">Font-size, Font-weight</th>
+	  </tr>
+	  
+	 <tr>
+      <th scope="row">Width, Height</th>
+	  </tr>
+	 <tr>
+      <th scope="row">Line Height</th>
+	  </tr>
+	   
+	  <tr>
+      <th scope="row">Margin</th>
+	  </tr>
+	   
+	    <tr>
+      <th scope="row">Padding</th>
+	  </tr>
+	  
+	   <tr>
+      <th scope="row">Opacity</th>
+	  </tr>
+	    <tr>
+      <th scope="row">Transform</th>
+	  </tr>
+	   <tr>
+      <th scope="row">z-index</th>
+	  </tr>
+	   
+	  
+    </tbody>
+  </table>
+</div>
+          
+             
+  <h2>Transition</h2>
+<p> Transition is the shortcut of all transition properties.
+ Transition properties like transition duration, transition property,
+ 
+ transition timing function and transition delay 
+ can be used in one single property.</p>
+ 
+     
+	
+
+
+
+   </div>
+    </div>
+      </div>     
+          
+</body>
+</html>

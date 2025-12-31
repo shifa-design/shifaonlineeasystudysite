@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <h2>HTML5 Geolocation</h2>
+ 
+ 
+ <div class="col-sm-10">
+ <div id="geo">
+<p>HTML5 Geolocation or Geolocation API is used to get user Physical
+ Location or geographical position using Device Sensors.
+ Earlier IP based location was used, but now Geo Location is
+ more popular as it is more accurate. As Geolocation is
+ related to user privacy, first browser will grant your permission.
+ </p>
+</div>
+
+
+ <div id="per">
+ <h2>Geolocation Permission</h2>
+<p>Getting user physical location comes under user privacy.
+ HTML5 Geolocation API will always grant permission from the
+ user to check geolocation. If a user allows, geolocation will work,
+ else geolocation will be blocked. </p>
+</div>
+
+
+<div id="check">
+ <h2>Check Geolocation</h2>
+<p>Geolocation is supported on https protocol &
+ HTML5 Based browsers only. </p>
+</div>
+
+
+
+<div id="get">
+ <h2>Geolocation Methods</h2>
+<h4>Get Geolocation</h4>
+<p>To get geolocation, use navigator.geolocation.getCurrentPosition()
+ function.</p>
+
+&lt;script&gt;<br>
+    navigator.geolocation.getCurrentPosition(success,error);<br>
+	
+    function success(positions){<br>
+        
+        var lat=positions.coords.latitude;<br>
+        var lon=positions.coords.longitude;<br>
+        var acc=positions.coords.accuracy;<br>
+                                         
+        alert("Latitute is " + lat+ ", longitude is  "+ lon + " and accuracy is " + acc );<br>
+    }<br>
+    
+    
+    function error(){<br>
+        alert("geolocation is denied");<br>
+    }<br>
+    
+&lt;/script&gt;<br>
+<h4>Watch Position</h4>
+<p>	For a moving devices, the properties will change. Even if 
+accuracy changes after some
+ time, we cannot get the new properties in getCurrentPosition method.
+ <br> To resolve this, use navigator.geolocation.watchPosition() method</p>
+ <br>
+  navigator.geolocation.watchPosition(success);<br>
+
+    function success(positions){
+        <br>
+        var lat=positions.coords.latitude;<br>
+        var lon=positions.coords.longitude;<br>
+        var acc=positions.coords.accuracy;<br>
+        var alt=positions.coords.altitude;<br>
+        var altAcc=positions.coords.altitudeAccuracy;<br>
+        var head=positions.coords.heading;<br>
+        var speed=positions.coords.speed;     <br>                           
+                                         
+        console.log("Latitute is " + lat+ ", longitude is  "+ lon + " and accuracy is " + acc );
+<br>
+    }<br>
+	<h4>Clear Watch</h4>
+<p>clearWatch method of navigator.geolocation is used to clear
+ watching geolocation by browser.
+ To do this, we have to pass an argument in clearWatch method.</p>
+ 
+	 <br>
+    var geo=navigator.geolocation.watchPosition(success);<br>
+
+    function success(positions){<br>
+        
+        var lat=positions.coords.latitude;<br>
+        var lon=positions.coords.longitude;<br>
+        var acc=positions.coords.accuracy;<br>
+    }<br>
+    
+    <br>   
+    navigator.geolocation.clearWatch(geo);
+
+</div>
+	 </div>
+         
+  <div class="col-sm-2" >
+  <div class="border border-3 p-2">
+        <a href="#geo">Geolocation</a>
+<a href="#per">Permission</a>
+<a href="#check">CheckLocation</a>
+<a href="#get">GetLocation Methods</a>
+
+		
+			 </div></div>
+          
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>Javascript Events and Events Listener</h2>
+<h4>Javascript Events</h4>
+<p>JavaScript Events are the techniques used by a user to interact with html elements, like mouse click, mouse over, key press, keyup, right click, touch etc.
+</p>
+
+
+ &lt;button onclick="alert(this.textContent)"&gt;Button &lt;/button&gt;
+
+ <br>
+&lt;script&gt;<br> 
+ document.querySelector("button").onclick=function(){<br>
+ alert(this.textContent)<br>
+ }  <br>
+ &lt;/script&gt;  
+ <br>
+ 
+ &lt;script&gt;<br>
+ document.querySelector("button").addEventListener("click",function(){ alert(this.textContent) })
+     <br>
+  &lt;/script&gt; <br>
+  
+ <h2>1.onclick</h2>
+<p> Javascript click event is a global event for keyboard, mouse 
+and touch interface. This event happen on mouse left click, tap on 
+touch device,
+ and keyboard click on focus (spacebar and enter key only)</p>
+ <p>document.querySelector("button").onclick=function(){
+    alert("clicked");
+}
+</p>
+
+
+<h2>2. oncontextmenu</h2>
+<p>Javascript oncontextmenu is a global event
+ for right click of mouse. This event happen on mouse and touchbar only
+</p>
+ <p>
+ document.querySelector("button").oncontextmenu=function(){<br>
+    alert("right click");<br>
+}<br>
+</p>
+
+
+<h2>3. onfocus</h2>
+<p>Javascript onfocus is a global event for keyboard, mouse and touch interface. This event 
+happen when user focus on form controls or hyperlink</p>
+ <p>
+ document.querySelector("input").onfocus=function(){<br>
+    this.value="";<br>
+} <br>
+</p>
+
+
+<h2>4. onblur</h2>
+<p>Javascript onblur is a global event for keyboard, mouse and
+ touch interface.
+ This event happen when user loses focus from focusable element.</p>
+ 
+<p>document.querySelector("input").onblur=function(){<br>
+    this.value="Name";<br>
+}<br>
+</p>
+
+
+
+
+<h2>5. onselect</h2>
+<p>Javascript onselect is a global event for keyboard, mouse and touch interface. This event happen when user select text in textbox or textarea.
+
+The onselect event is used only when selection is done inside input and textarea element.</p>
+ 
+<p>
+
+document.querySelector("input").onselect=function(){<br>
+    this.nextElementSibling.innerHTML="You have selected";<br>
+}<br>
+</p>
+
+
+<h2>6. onscroll</h2>
+<p>Javascript onscroll is a global event for keyboard, mouse and 
+touch interface. This event happen when user scroll window using 
+mouse, keyboard or touch interface.
+
+The onscroll event is used in many scroll based effects like
+ parallax scrolling, smooth scroll etc.</p>
+
+<p>
+
+window.onscroll=function(){<br>
+    console.log(this.scrollY);<br>
+    
+}<br>
+</p>
+
+
+
+<h2>7. onload</h2>
+<p>
+Javascript onload is a global event for keyboard, mouse and touch interface. This event happen when all requests in a webpage are loaded on DOM.
+
+Onload event is helpful if we want toload DOM content first and then add javascript after DOM Elements are loaded 
+
+</p>
+
+<p>
+
+    console.log("window loading");        <br>
+    
+window.onload=function(){<br>
+   console.log("window loaded");  <br>
+}<br>
+    
+    console.log("window still loading"); <br>
+</p>
+
+<h2>JS EventListeners</h2>
+<p>Event Listners are used to add and remove JavaScript Events. The most preferred and recommended way of dealing with javascript events is to use event listeners. These event listeners were introduced in ECMA 5. Thus 
+all modern web browsers support them (Except I.E 8 and below)</p>
+
+<h4>Advantage of using Event Listeners</h4>
+1.
+Can add multiple functions on same event.<br>
+2.
+Event can be removed using removeEventListener function.<br>
+3.
+Event Propagation can be changed.<br>
+4.
+Can use custom events, like touch events</p>
+<br>
+
+<h4>Drawback of Event Listeners</h4>
+<p>No support for IE 8 and below</p>
+
+<h4>Types of Event Listeners</h4>
+<h5>1. addEventListener</h5>
+<p>addEventListener is the most preferred and recommended way to handle javascript events.
+
+Inside addEventListener function, first parameter is event type string, like click, mouseover, mouseout, scroll etc and second parameter is function that will be called when event occurs. Second parameter can 
+also be an anonymous function. Third parameter is boolean.</p>
+
+   document.body.addEventListener("click",doThis);<br>
+    
+    function doThis(){<br>
+        alert(this.textContent);<br>
+    } <br>
+
+<h5>2. removeEventListener</h5>
+
+<p>Event listeners can be removed using removeEventListener() method. This is another advantage of using event listeners.</p>
+
+<p>   var btn=document.querySelector("button");<br>
+    btn.addEventListener("click", remove);<br>
+        
+    function remove(){<br>
+        alert("Clicked");<br>
+        btn.removeEventListener("click",remove);<br>
+    }<br>
+	</p>
+
+
+</div>
+   </div></div>       
+</body>
+</html>

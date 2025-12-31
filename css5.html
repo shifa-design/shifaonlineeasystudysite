@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-10">
+<h2>  CSS Before and After</h2>
+<p>CSS ::before and ::after are Pseudo Elements
+ under Pseudo Selectors which allow us to insert content into html,
+ without write in html code. The content is visible is web browser, 
+ but not in source code. Actually ::before and ::after selectors insert 
+ content in DOM (inspect element). content property is compulsory in both
+ :before and :after.</p>
+<p>
+We can also write :before or :after in CSS2. Both works on all modern
+ browsers, but for IE8, use :before and :after only
+</p>
+
+<h4>Content</h4>
+<p>content is the compulsory property of both 
+before and after. Without content, before and after will not work</p>
+<h5>Value of content property</h5>
+1.String within quotes<br>
+2.attribute using attr()<br>
+3. url() for image<br>
+4. counter(count)<br>
+<p>Content can be any string within double quotes, hexadecimal code, attribute
+ and url. To use hexadecimal value, use backslash (\). See example
+</p>
+
+<h4>::before</h4>
+<p>::before or :before is used to add some content before html
+ element through css without affecting the markup. ::before was 
+ introduced in css 2.1 and is supported on Internet Explorer 8 and 
+ above. before content is treated as child of same element. :"before is 
+ inline.
+
+For IE 8 and above, use :before.</h4>
+
+
+<style>
+    .list li:before{ content:"Q No: " }    
+</style>   
+
+<ul class="list">		
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+</ul>
+
+<h5>carat icon using before</h5>
+ <style>
+        button:before{
+            content:"";
+            display:inline-block;
+            border-style:6px solid;
+            border-color:white transparent transparent transparent;
+        }
+    </style>
+    
+    
+    <p>This is a Quote<p>
+	
+	
+	
+	<h4>::after</h4>
+	
+	<p>::after or :after pseudo selector is used to add content after 
+	an html element, without any change in HTML Markup. ::after
+	was also introduced in css 2.1 with before.:after is also inline</p>
+	<p>For IE 8 and above, use :after</p>
+	
+	<h5>CSS after example</h5>
+	
+<style>
+	.list li:after{ content:"." }    
+</style>
+   
+
+    <ul class="list">	
+        <li>Para 1</li>
+        <li>Para 2</li>
+        <li>Para 3</li>
+        <li>Para 4</li>
+        <li>Para 5</li>
+    </ul>
+	
+	
+<h4>Clear both using after</h4>
+<p>	One of the best use of CSS After selector is to Clear both using after . :after or ::after can be used to clearfix element before closing.
+ Use display block and clear both in after with content "". See example
+</p>
+<h5>Clear List using After</h5>
+	
+ <style>   
+        ul{
+            list-style:none;
+        }
+        ul li{
+            float:left;
+            margin-right:10px;
+        }
+        ul:after{
+            content:"";
+            clear:both;
+            display:block;
+        }   
+    </style>
+    
+    <ul>
+        <li>List 1<li>
+        <li>List 2<li>
+        <li>List 3<li>
+        <li>List 4<li>
+        <li>List 5<li>
+        <!--After will clear here-->    
+    </ul>
+             
+			 
+
+
+
+
+
+
+
+
+</div></div>
+ 
+
+   <div class="col-sm-2">
+</div>   
+             
+    </div>
+    </div>
+                   
+          
+          
+</body>
+</html>

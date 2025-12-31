@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>  Javascript DOM , Functions and CSS</h2>
+<h4>Function</h4>
+<p>A function can be reused, thus they are also used to avoid repetition of code
+<br>
+A function can take input and then return output. Functions are one of the major building blocks in JavaScript.
+<br>
+Functions are callable entities. To call a function, we use parenthesis after function name, i.e sayHi(). All methods are build-in functions, 
+that's why they must be called using parenthesis
+ <br>
+ <p>Functions can be easily reused. To invoke a function, we can use events like click, hover, submit, focus, mousemove etc, or 
+ just call by function name followed by parentheses.<br>
+<h4>JavaScript Function Declaration</h4>
+
+ &lt;script&gt;
+    function add(){ 
+          // code inside
+    } 
+&lt;/script&gt;
+
+<h4>Function Expression</h4>
+
+&lt;script&gt;<br>
+   var myfunction=function(){ <br>
+   };<br>
+&lt;/script&gt;<br>
+ 
+ <h4>Call a Function</h4>
+ <p>To call a function in javascript, use function name followed by parenthesis.</p>
+ 
+ &lt;script&gt;
+    function sayHi(){ 
+        console.log('hello');               
+    };
+
+sayHi();
+
+&lt;/script&gt;
+ 
+ 
+ <h4>Arrow Functions</h4>
+ <p>Arrow functions are actually short form of expression functions. To call arrow functions, we have to declare function first and then call.
+<br>
+Arrow functions were introduced in ES6. Its recommended to use function declaration or expression for IE browsers.
+ <br>
+ 
+    var myFunc1=(x,y)=>{ };   <br>
+    
+    var myFunc2=(x)=>{ };        <br>    
+    var myFunc3=x=>{ };<br>
+             
+    </div>
+    </div>
+         
+<h3>JavaScript DOM</h3>
+<p>Document Object Model or DOM is a Browser API to get, change and update the HTML Elements or attributes on runtime in a browser window. We can
+ see these changes in browser inspect, but not in source code. 	
+</p>
+
+<h4>DOM Methods</h4>
+<h3>1. Get Element By Id</h3>
+<p>document.getElementById() return the element with unique
+ id that is given as an argument. It is supported in all major 
+ browsers. As per w3c specifications, id attribute and id's 
+ value is 
+unique. Get Element By Id will call an element with his unique id
+
+<br>
+
+&lt;h1 id="heading"&gt;Javascript DOM&lt;/h1&gt;<br>
+&lt;script&gt;   <br>
+ var x=document.getElementById("heading");<br>
+&lt;/script&gt;<br>
+
+<h3> 2. Get Elements By Tag Name</h3>
+<p>document.getElementsByTagName() return list of all elements with tag
+ name given as an argument. It is supported in all major browsers
+</p>
+
+&lt;p&gt; Para 1&lt;/p&gt;<br>
+&lt;p&gt;Para 2&lt;/p&gt;<br>
+&lt;script&gt;    <br>
+ var x=document.getElementsByTagName("p");<br>
+ x.length;			<br>
+ var p1=x[0];  <br>      
+ var p2=x[1];      <br>
+&lt;/script&gt;<br>
+
+
+<h4>3. Get Elements By Class Name</h4>
+<p>document.getElementsByClassName() return list
+ of all elements with class name given as an argument. It is supported 
+in all major browsers, except IE 8 and below doesn't support<br>
+
+&lt;p class="para"&gt; Para 1&lt;/p&gt;
+&p class="para"&gt; Para 2&lt;/p&gt;
+&lt;;script&gt;    
+ var x=document.getElementsByClassName("para");
+ var p1=x[0];        //return first p element;
+ var p2=x[1];        //return second p element;
+&lt;/script&gt;
+<br>
+
+<h4>4. Query Selector</h4>
+<p>document.querySelector() return first element in document with
+ tag, id, class or any css selector given as an argument.querySelector is pure CSS selector based</p>
+ 
+ <p class="para" id="para1"> Para 1</p>
+<p class="para" id="para2"> Para 2</p>
+
+&lt;script&gt;    
+var x=document.querySelector('p');            // first p tag;<br>
+var y=document.querySelector('#para1');       // id para1<br>
+var z=document.querySelector('.para');        // first para class <br>
+var p=document.querySelector('ul li');        // first li of ul <br>
+var q=document.querySelector('ol li');         // first li of ol <br>
+
+var a=document.querySelector('p:last-child');   // last p element <br>
+var b=document.querySelector('p:nth-child(2)'); // second p element <br>
+&lt;/script&gt;<br>
+
+<h4>5. Query Selector All</h4>
+<p>document.querySelectorAll() return list of elements in
+ document with tag, id, or class name given as an argument. 
+ querySelectorAll() returns data in array-like structure, but
+ not array. It is pure CSS selector based. 
+ document.querySelectorAll method is supported in all
+ major browsers, except 
+IE 7 and below. IE 8 and above support CSS 2.1, but 7 doesn't
+</p>
+
+&lt;p class="para"&gt; Para 1&lt;/p&gt;
+&lt;p class="para"&gt; Para 2&lt;/p&gt;
+&lt;p&gt; Para 3&lt;/p&gt;
+&lt;script&gt;    
+ var x=document.querySelectorAll('p');     // all p tags;
+ var y=document.querySelectorAll('.para'); 
+    // all elements with class para
+ 
+ x.length         // return 3 
+ y.length         // return 2 
+ 
+ 
+&lt;/script&gt;
+
+<h2>JavaScript CSS</h2>
+<h4>1. JavaScript Style</h4>
+<p>Javascript style property is used to set css to html elements
+. This is applicable to DOM Elements only. After document element, style property 
+is used. All the css properties are used in camel casing,</p>
+Example<br>
+&lt;button class="red"&gt;Red&lt;/button&gt; <br>
+
+&lt;script&gt;            <br>
+document.querySelector(".green").onclick=function(){<br>
+    document.querySelector(".exp").style.color="green";<br>
+};<br>
+
+&lt/script&gt;<br>
+
+<h4>2. JavaScript getComputedStyle</h4>
+<p>JavaScript getComputedStyle method is used to get style of html elements in JavaScript String. getComputedStyle is a window method 
+with parameter HTMLElement. See how to get css in javascript<br>
+
+&lt;button class="toggle"&gt;Hide Text&lt;/button&gt; <br>
+&lt;span class="exp"&gt;This is example text&lt;/span&gt; <br>
+
+&lt;script&gt;            <br>
+document.querySelector(".toggle").onclick=function(){<br>
+    var x=document.querySelector(".exp");<br>
+    var y=getComputedStyle(x).display;<br>
+    
+    if(y=="none"){<br>
+        x.style.display="inline";<br>
+    }<br>
+    else{<br>
+        x.style.display="none";<br>
+    }   <br>
+};<br>
+&lt;/script&gt;<br>
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>JQuery Tutorials</h2>
+<p>JQuery is the most popular JavaScript Library. Libraries in
+ programming are collections of multiple functions inside a 
+ single file, like Jquery. Jquery was released in 2006 and now 
+ a days, 75% of websites are using JQuery. JQuery has wide range of
+ actions, like Event Handling, DOM Interaction, DOM manipulation,
+ Animations, AJAX interaction etc making Jquery one
+ of the most popular JavaScript Library. JQuery is also very easy to
+ learn.</p>
+ 
+ <h4>What Jquery can do?</h4>
+ <p>JQuery can simplify Javascript Programming.
+
+The best thing about Jquery is that Jquery is supported by Old Internet
+ Explorer versions, like 6, 7,8 (jQuery 1 versions) .
+ A Single line of Jquery Expression will work on new and old browsers</p>
+ 
+ <h4>Reason To Choose JQuery</h4>
+ <p>1.Light Weight, 30kb file (minified and gziped).<br>
+2. Upto 50% less syntax than JavaScript.<br>
+3. Support I.E. 8 and below browsers ( JQuery 1+ versions).<br>
+4. 2000+ free plugins available on jQuery site. <br>
+
+<h5>JQuery Ajax</h5>
+$.ajax({<br>
+  url: "/api/pincode",<br>
+  method: "GET",<br>
+  data: {<br>
+    zipcode: 972013<br>
+  },<br>
+  success: function( result ) {<br>
+    $( "#pincode-data" ).html( result  );<br>
+  }<br>
+});<br>
+<p>
+</div>
+   </div></div>       
+</body>
+</html>

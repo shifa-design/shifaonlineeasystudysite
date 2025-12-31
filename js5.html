@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>Javascript Regular Expressions</h2>
+<p>The Regular Expression or regex in short is a build in JS Object used to Test and Match strings. This can check characters in strings and also their sequence. One of the main use of Regular
+ Expression is to test password strength</p>
+ <h4>RegExp Methods</h4>
+ <p>Once a pattern is created, it is tested or matched with a string to check if a string pass matches the pattern or not. To do this, test() or exec() methods are used. Both methods can test pattern. The test method return 
+ boolean, whereas exec method return array of pattern or null
+ </p>
+ <h4>RegExp Test Method</h4>
+ <p>The regexp test method return boolean. If pattern match string, it return true, else false. We use test method
+ in if condition to check pattern matched to string or not.
+ </p>
+ 
+var str="hello js"; <br>               
+var pattern=/\d/;       <br>
+if(pattern.test(str)){<br>
+    alert("pattern matched")<br>
+}<br>
+else{<br>
+    alert("pattern not matched");<br>                          
+} <br>
+
+<h4>RegExp Exec Method</h4>
+<p>Exec methods also test pattern in string, but return an array containing first matched found or null. If pattern is matched with given string, exec method will return array of first matched 
+character in return. But if not matched, it will return null.</p>
+var str="hello js";  <br>              
+var pattern=/\w/;        <br>
+if(pattern.exec(str)){<br>
+    alert("pattern matched");<br>
+}<br>
+else{<br>
+    alert("pattern not matched");<br>                          
+} <br>
+
+<h4>RegExp properties</h4>
+<p>There are three properties of Regular Expressions. These are g, i and m. 
+First just have a look on RegExp properties and their use</p>
+
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Property</th>
+      <th scope="col">Use</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">global</th>
+      <td>make pattern return all matched. By default, the pattern looks for first match only</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">ignorecase, i.e. i</th>
+      <td>make pattern case-insensitive. By default pattern is case sensitive.</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">multiline, i.e. m</th>
+      <td>Make pattern multiline. By default pattern stops at line end.</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+ <h4>Regular Expression special characters</h4>
+<p>Regular Expression Special Characters or also known as metacharacters are number of characters having special meaning 
+in pattern. That's why they are also known as metacharacters</p>
+
+    
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">metacharacters</th>
+      <th scope="col">use</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">.</th>
+      <td>match any character</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">\w</th>
+      <td>match any word character (alphabet or number).</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">\W</th>
+      <td>match any non-Word character</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">\d</th>
+      <td>match any digit character</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">\D</th>
+      <td>match any non-digit character</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">\s</th>
+      <td>match any whitespace character</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">\S</th>
+      <td>	match any non-whitespace character</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+ <h4>Regular Expression Modifiers</h4>
+<p> Regular Expression Modifiers are special characters used to modify pattern.</p>
+
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Modifier</th>
+      <th scope="col">Use</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">?</th>
+      <td>matches zero or one occurrences of pattern</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">*</th>
+      <td>matches zero or one occurrences of pattern</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">+</th>
+      <td>matches one or more occurrences of pattern</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">{n}</th>
+      <td>matches n occurrences of pattern</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">{n,}</th>
+      <td>matches atleast n occurrences of pattern</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">{,m}</th>
+      <td>matches atmost m occurrences of pattern</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">{n,m}</th>
+      <td>matches atleast n and atmost m occurrences of pattern</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">^</th>
+      <td>specify the pattern at beginning</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">$</th>
+      <td>specify the pattern at end</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+  <h4>Regex Example</h4>
+  <p>In the next part, we are going to build some popularly used regex pattern with explanation and examples.</p>
+  <h6>1.Test a non decimal number<br>
+  var patt=/[0-9]{1}/
+  <br>
+  2. Test Alphabet<br>
+  var patt=/[a-zA-Z]{1}/<br>
+  3.Check 6 digit Pincode<br>
+  var patt=/^[0-9]{6}$/;<br>
+  4. Check number followed by alphabet<br>
+  
+  
+             
+             
+    </div>
+    </div>
+         
+             
+             
+    </div>
+    </div>
+                  
+             
+    </div>
+    </div>
+         
+
+
+
+
+
+
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

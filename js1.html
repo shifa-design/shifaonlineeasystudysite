@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>Javascript Tutorial and variables</h2>
+<p> JavaScript is used to build interactive websites with dynamic features and to validate form data. JavaScript is high-level, dynamic and browser interpreted programming language, supported by all modern web browsers. Apart from web browser, JavaScript is also
+ used to build scalable web applications using Node JS or Deno.
+</p>
+
+
+<h2>Some popular facts about JavaScript</h2>
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Javascript is the only client side scripting( i.e. browser interpreted) language.</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">JavaScript can build interactivity Websites.</th>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row"> Javascript is Object Based with prototype inheritance model for OOPS.</th>
+         
+    </tr>
+    <tr>
+      <th scope="row"> Javascript can put dynamic content into a webpage.</th>
+    
+    </tr>
+	
+	<tr>
+      <th scope="row"> Javascript can react to events like Mouse Click, mouse hover, mouse out, form submit etc .</th>
+    
+    </tr>
+	<tr>
+      <th scope="row">
+ Javascript can also be used in developing server side application </th>
+    
+    </tr>
+	
+	<tr>
+      <th scope="row">Popular Editors like, Brackets and VS Code are written in Javascript.
+  </th>
+    
+    </tr>
+  </tbody>
+  </table>
+</div>
+  
+
+<h2 class="py-2">Variables in JavaScript</h2>
+<p>A variable or var is storage area used to store a value in memory. To create a variable in javascript, var keyword is used. var is a reserved keyword in javascript, used to create variables.</p>
+<p>JavaScript variables are loosely typed. Means a variable x (var x) can store any type of data, like string, number, function, boolean, undefined, null, array or object.</p>
+<h4>
+How to declare variables in JavaScript</h4>
+
+  
+&lt;script&gt;<br>
+
+ var x="shifa";   <br>  
+ var y='shifa';     <br>
+ var z=9;          <br>
+ var a=2, b=3, c=5;<br>
+ var u;            <br>
+ &lt;/script&gt;<br>
+ 
+ <h4>
+ Variable naming convention in JavaScript</h4>
+ <p>To declare a variable in javascript, there are some rules. Here are 
+ some rules used to declare variables names in javascript.</p>
+ 
+ 
+<div class="table-responsive-sm">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th > variables names cannot include javascript reserved keywords, like var, for, in, while, true,
+	  false, null, class, let, const, function etc</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th > variables cannot starts with numbers 
+	  and hyphen, use alphabets or underscore(_)</th>
+   
+      
+    </tr>
+    <tr>
+      <th >For separation in variable names, use underscore (_) or camel casing, do not use hyphen (-) separation and white space, i.e, user_name is valid,
+	  username is also valid, but user-name is invalid</th>
+      
+     
+    </tr>
+    <tr>
+      <th >variables can have strings followed by numbers, like x1 and x2
+	  are allowed but 1x, 2x is not allowed</th>
+       </tr>
+  </tbody>
+  </table>
+</div>
+          
+  <h4>Strict Mode</h4>
+<p> ECMAScript 5 includes strict mode in javascript. "use strict" string is used to follow strict mode. In strict mode, var is compulsory, but in 
+sloopy mode, we can also create variables without var keyword 
+ </p>
+ 
+ &lt;script&gt;<br>			
+ "use strict";<br>
+ var x1="shifa";  <br>
+ x2="javascript"; <br>
+ for( var i=1;i<=10;i++){} <br>
+ for( i=1;i<=10;i++){}  <br>   
+ var x=10;                  <br>
+ var y=010;   <br>
+&lt;/script&gt;<br>
+
+   
+<h4>Sloppy Mode</h4>
+ <p>By default javascript is written in sloppy mode. Sloppy mode allow us to create a variable with or without var keyword</p>
+ 
+ 
+&lt;script&gt;<br>			
+ var x1="tech altum";<br> 
+ x2="javascript";        <br> 
+&lt;/script&gt;<br>
+    </div>
+    </div>
+         
+   <h4>Global Variables</h4>
+<p>Variables declared outside function are global variable. Global variables have global scope. This means, a variable in &lt;script&gt;
+ tag is by default global. Global Variable 
+once declared can be used anywhere, even inside a function.   
+  </p>
+  
+ <h4>Local Variables </h4>
+<p> Variables declared inside functions are local variables. Local Variables have local scope. This means they 
+are accessible only within their function block, not outside.</p>
+
+ function myFunction(){<br>
+        
+        var x="local variable";<br>
+        y="global variable";    <br>
+             
+        console.log(x); <br>
+        console.log(y);  <br>
+    }<br>
+    
+        myFunction()  <br>      
+        console.log(x);   <br>
+        console.log(y);<br>
+
+<h4>let and Const block scope</h4>
+<p>let and const were introduced in ECMA 6. let is used to declare temporary values with block scope, inside {} . Whereas const is used to declare permanent values, which
+ can't be change. Like value of pi, e, G and other constants
+</p>
+
+
+&lt;script&gt;<br>	
+{	<br>				
+    let x="user";     <br>
+	}<br>
+&lt;/script&gt;<br>
+<br>
+&lt;script&gt;	<br>		
+const pi=Math.PI;   <br>
+&lt;/script&gt;
+
+    </div>
+    </div>
+         
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-10">
+<h2>  CSS Pseudo Selctors</h2>
+<p>Pseudo Selectors in css specify a special state of current selector.
+ Pseudo Selectors are divided as Pseudo Class and Pseudo 
+elements. To use pseudo selectors, colon (:) is used after selector.</p>
+
+<p>Pseudo Class can change properties of an element on particular event, like mouseover,
+ focus etc.</p>
+ 
+ <p>Pseudo Elements are used to call particular child of parent, like first-line,
+ first-letter etc.
+</p>
+         
+ <h4>Pseudo Class and Pseudo Elements
+Pseudo Classes</h4>
+<br>
+1. :link<br>
+2. :visited<br>
+3. :active<br>
+4. :focus<br>
+5. :hover<br> 
+ 
+ <h4>Pseudo Elements</h4><br>
+ 1. :first-line<br>
+ 2. :first-letter<br>
+ 3. :first-child<br>
+ 4. :before<br>
+ 5. :after<br>
+ 
+ <h4>:link</h4>
+ <p>:link pseudo class is used to change properties of an unvisited 
+ link. once clicked, the link pseudo property will not show as link is 
+ visited. Default 
+ link color is blue. link pseudo class was introduced in css level 1</p>
+ 
+ <style>
+	a:link{ color:red}
+</style>
+
+<a href="#">Link</a>
+
+
+
+
+
+<h4>:visited</h4>
+<p>:visited pseudo class works only when a hyperlink is visited.
+ Default color of visited hyperlinks is purple. visited pseudo classcan
+ change color and properties of
+ visited links. visited pseudo class was also introduced in css level 1
+ </p>
+ 
+ 
+<style>
+a:link{ color:red}                /* Unvisited Link*/
+a:visited{ color:orange}          /* Visited Link*/
+</style>
+
+<a href="#">Link</a>
+
+
+<h4>:active</h4>
+<p>:active pseudo class works when mouse left key is pressed, as soon
+ as he released mouse key, 
+:active stops. On touch devices, :active will works on touch.</p>
+
+<style>            
+button:active{ background:blue}            
+</style>
+
+<button>Active</button> 
+
+
+<h4>:hover</h4>
+<p>:hover class works when user mouseover on an element. On
+ mouseout, it comes back to its original form. :hover is meant 
+ for non touch devices 
+only. On touch devices, :hover will conflict with :active</p>
+
+
+
+<style>  
+    button{ background:white}                
+    button:hover{ background:blue; color:white}    
+    button:active{ background:red; color:white}                
+</style>
+
+<button>Hover</button>
+
+
+<h4>:first-line</h4>
+<p>:first-line pseudo element works only for the first line of a paragraph or text
+</p>
+
+
+<style>
+p{ color:blue}      	    /* For p tag*/
+p:first-line{ color:red}    /* First line of p tag*/
+</style>
+
+<p>Inteligula congue id elis donec sce sagittis intes id 
+laoreet aenean leo sem massawisi
+
+ condisse leo sem ac. Tincidunt nibh quis dui fauctor et.</p>
+
+<h4>:first-letter</h4>
+<p>:first-letter pseudo element is used to select
+ the first letter of a text element</p>
+ 
+
+<style>
+	p{ color:blue; font-size:16px}
+	p:first-letter{ font-size:24px; color:red}    
+</style>
+
+<p>This is a paragraph</p>
+
+</div></div>
+ 
+
+   <div class="col-sm-2">
+</div>   
+             
+    </div>
+    </div>
+                   
+          
+          
+</body>
+</html>

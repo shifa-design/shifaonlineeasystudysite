@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h4>   JQuery SlideUp and SlideDown</h4>
+<p>The jQuery slide methods slide elements up and down</p>
+
+<h5>JQuery Sliding Methods</h5>
+<p>
+
+With jQuery you can create a sliding effect on elements.<br>
+
+jQuery has the following slide methods:<br>
+
+1. slideDown()<br>
+2. slideUp()<br>
+3. slideToggle()<br>
+</p>
+
+<h4>jQuery slideDown() Method</h4>
+<p>The jQuery slideDown() method is used to slide down an element.<br>
+
+Syntax:<br>
+
+$(selector).slideDown(speed,callback);<br>
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+
+The optional callback parameter is a function to be executed after the sliding completes.
+
+The following example demonstrates the slideDown() method:</p>
+
+<p>Example
+$("#flip").click(function(){<br>
+  $("#panel").slideDown();<br>
+});<br></p>
+
+<h4>jQuery slideUp() Method</h4>
+<p>
+The jQuery slideUp() method is used to slide up an element.<br>
+
+Syntax:<br>
+
+$(selector).slideUp(speed,callback);<br>
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+
+The optional callback parameter is a function to be executed after the sliding completes.
+
+The following example demonstrates the slideUp() method.
+<br>
+Example<br>
+$("#flip").click(function(){<br>
+  $("#panel").slideUp();<br>
+});<br>
+
+</p>
+<h4>jQuery slideToggle() Method</h4>
+<p>
+The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+<br>
+If the elements have been slid down, slideToggle() will slide them up.
+<br>
+If the elements have been slid up, slideToggle() will slide them down.
+<br>
+$(selector).slideToggle(speed,callback);<br>
+The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+<br>
+The optional callback parameter is a function to be executed after the sliding completes.
+<br>
+The following example demonstrates the slideToggle() method:
+<br>
+Example<br>
+$("#flip").click(function(){<br>
+  $("#panel").slideToggle();<br>
+});<br>
+</p>
+
+
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

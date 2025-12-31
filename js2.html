@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2> Javascript Numbers and Strings</h2>
+ <p> Strings are collection of characters stored inside quotes ( double or single) or back tick (in ES6).</p>
+ <p>Strings can store data, like name, email id, age etc. Default datatype for input, select, textarea value is always a string/p>
+ <p>In JavaScript, Strings are declared inside double quotes "" or single quotes ''.</p>
+ <h4>String Methods</h4>
+ <p>JavaScript Methods are build in functions used to perform an action to strings. All methods are called by method name and then parenthesis. Parameters are passed inside parenthesis if required.</p>
+ <h4>1.indexOf</h4>
+ <p>
+ <br>
+ indexOf methods returns index of first matched substring. The return value of indexOf methods is always a number
+ <br>
+  var x="tebez";<br> 
+    
+    x.indexOf("t")  <br>       
+    x.indexOf("e")      <br>   
+    x.indexOf("b")<br>
+	</p>
+	
+	
+	<h4>2.lastIndexOf</h4>
+	<p>lastIndexOf methods returns index of last matched substring. The return value of lastIndexOf method will also be number.
+	
+<br> var x="tazeha"; <br>
+    
+    x.indexOf("t")  <br>           
+    x.lastIndexOf("z") <br>
+	
+	</p>
+	
+
+<h4>3. concat</h4>
+	<p>concat method is used to concatenate or merge two strings into one. The 
+	second string should be passed as argument.
+	
+<br>
+var  var x="tazeha"; <br>
+    var y="foil";<br>
+    x.concat(y);<br>
+	</p>
+	
+<h4> 4. charAt</h4>
+<p>charAt method return character at given index in argument<br>
+	
+
+    var x="techaltum"; <br>
+    
+    x.charAt(0);  <br>  
+    x.charAt(1);<br>
+</p>
+
+
+<h4>5. search</h4>
+	<p>search method search for a matched pattern between string 
+	and regular expression and return index of matched pattern
+	
+<br>
+    var y="foil";<br>
+   y.search("t");<br>
+   y.search("T');<br>
+	</p>
+	
+
+
+<h4>6. trim</h4>
+	<p>trim method trim extra whitespace from beginning and ending.	
+<br>
+    var y="foil";<br>
+  y.trim();<br>
+	</p>
+	
+	
+	
+<h4>7. search</h4>
+	<p>search method search for a matched pattern between string 
+	and regular expression and return index of matched pattern
+	
+<br>
+    var y="foil";<br>
+   y.search("t");<br>
+   y.search("T');<br>
+	</p>
+
+	
+<h4>7. replace</h4>
+	<p>replace method is used to replace a single character or word with a new characters. The first
+	argument is replaced character, and second is replacing one
+	
+<br>
+var x="shifa alam";
+x.replace("a","T")            
+    x.replace("hifa","TECH")      
+    x.replace(" ","-")  
+  <br>
+	</p>
+
+
+
+
+<h2>Numbers</h2>
+<p>JavaScript Numbers can be integers (exp 3) or whole numbers ( exp 3.14). JavaScript Numbers can perform addition,
+ subtraction, multiplication, division and Modulus</p>
+ <h4>Numbers Method</h4>
+ <p>Numbers Methods are used to convert a number to string, exponential, 
+ precision and fixed. Here are number methods with example.
+ 
+ 
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Method</th>
+      <th scope="col">use</th>
+	  <th>Example</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">toString()</th>
+      <td>convert number to string.</td>
+      <td>	var x=6;<br>
+x.toString()="6";</td>
+    </tr>
+    <tr>
+      <th scope="row">toLocalString()</th>
+      <td>convert number to local string</td>
+	  <td>var x=6;<br>
+x.toLocalString()="6";</td>
+    <td> 
+    </tr>
+	
+    <tr>
+      <th scope="row">toExponential()</th>
+      <td>convert decimal to exponential notation</td>
+  <td>  var x=6;<br>
+x.toExponential()="6e+0";</td> 
+    </tr>
+	
+	<tr>
+      <th scope="row">toPrecision(1)</th>
+      <td>convert number to Precise .</td>
+<td>var x=1.23456;<br>
+x.toPrecision(1)="1"  </td>   
+    </tr>
+	
+	<tr>
+      <th scope="row">toPrecision(2)</th>
+      <td>convert decimal to precision 2 .</td>
+  <td>	var x=1.23456;<br>
+x.toPrecision(2)="1.2";</td>   
+    </tr>
+	
+	<tr>
+      <th scope="row">toPrecision(3)</th>
+      <td>convert decimal to precision 3</td>
+  <td> var x=1.23456;<br>
+x.toPrecision(3)="1.23";</td>  
+    </tr>
+	
+	
+	<tr>
+      <th scope="row">toFixed()</th>
+      <td>to convert a number to string with fixed decimal value</td>
+ <td> var pi=3.1416;<br>
+pi.toFixed(); <br>
+pi.toFixed(1);   <br>
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+<h4>Functions convert String to Number in javascript</h4>
+  <h4>Number Function</h4>
+  <p>
+Number Function can convert string to numbers. Number Function
+ can convert both floating/decimal and non-floating/integers. But if a string contains string character like
+ alphabets or special character, number function will return NaN           
+ <br>
+var a="100";<br>
+    var b="100.5";
+    var c="100px";
+    var d="abc100";
+    
+    Number(a) <br>      
+	
+
+ </p>  
+
+
+
+  <h4>parseInt Function</h4>
+  <p>
+  parseInt Function can convert string to numbers, 
+  but non-floating/integers values only. parseInt can also 
+  convert binary, octal and hexadecimal to decimal numbers.
+  <br>
+ var a="100";<br>
+    var b="100.5";<br>
+    var c="100px";<br>
+    var d="abc100";<br>
+    
+    parseInt(a)       
+	<br>
+	parseInt(b)  <br>
+    parseInt(c)    <br>
+    parseInt(d)<br>   
+	
+
+ </p>
+
+
+<h4>parseFloat Function</h4>
+  <p>
+ parseFloat Function can convert string to numbers, 
+ floating/decimals and non-floating/intergers both. parseFloat
+ can also convert binary, octal and hexadecimal to decimal numbers
+  <br>
+ var a="100";<br>
+    var b="100.5";<br>
+    var c="100px";<br>
+    var d="100.5px";<br>
+    var e="abc100";<br>
+    
+    parseFloat(a)  <br>
+    parseFloat(b)  <br>
+    parseFloat(c)      <br>
+    parseFloat(d) <br>      
+    parseFloat(e)<br>
+
+ </p>
+
+
+
+
+<h4>isNaN, is Not a Number Function</h4>
+<h4>isNAN</h4>
+  <p>
+ JavaScript isNaN function returns a boolean value. For example, isNaN("2") 
+ is false and isNaN("a") is true. Even isNaN(NaN) is also true
+  <br>
+ isNaN(NaN)                     <br>
+    isNaN(1)    <br>                   
+	isNaN("1")      <br>                
+    isNaN("a")          <br>
+            
+    isNaN("2a") 
+<br>
+ </p>
+ 
+ 
+ 
+
+<h4>isFinite</h4>
+  <p>
+ isFinite function tells whether a number is finite or not.
+ In JavaScript, number less than 1e308 or 1e+308 are finite
+ numbers. Numbers greater than 1e308 are Infinite, 
+ for example, 2e308 and more are infinite numbers in JavaScript
+ 
+  <br>
+ 
+    isFinite(Infinity)            <br>
+    isFinite(2e308)               <br>
+    isFinite(1e308)                <br>
+    isFinite(1e307)                <br>
+    isFinite(123)<br>
+<br>
+ </p>
+ 
+ 
+             
+    </div>
+    </div>
+         
+	
+
+</div>
+   </div></div>       
+</body>
+</html>

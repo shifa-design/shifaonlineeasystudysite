@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>  Javascript Timing Function</h2>
+<h4>Timing Function</h4>
+<p>The JS window object provides two build in timing functions, 
+setInterval and setTimeout to repeat a function after certain 
+time duration or to run a function once after certain time.</p>
+
+<h4>1. setnterval</h4>
+<p>The Javascript setInterval method repeat a function after
+ given time. The first parameter of setInterval is function name 
+ and second parameter is time (in milliseconds). As setInterval is
+ a JS build in 
+function, so no need to invoke function name in setInterval.</p>
+ <p>
+<h5>setInterval Example:</h5>
+
+&lt;script&gt;<br>
+
+    function myAlert(){<br>
+      alert("my alert");<br>
+    } <br>                 
+    setInterval(myAlert,1000);<br>  
+                        
+&lt;/script&gt;<br>
+
+<h4>2. setTimeout</h4>
+<p>setTimeout method is used to call a function once but after a delay of some seconds. The first parameter of setTimeout 
+method is function name and second is time in milliseconds</p>
+
+<h5>setTimeout Example</h5>
+function myAlert(){<br>
+    alert("hey there");<br>
+  }                    <br>
+  setTimeout(myAlert,1000)<br>  
+  
+  <h4>3. clearInterval</h4>
+  <p>clearInterval function is used to stop setInterval and setTimeout functions for further executions. The parameter in clearTimeout function is either id of setInterval/setTimeout
+ or variable name of setInterval/setTimeout functions</p>
+ <h5>clearInterval Example</h5>
+ 
+var counter=0;<br>
+   function setTimmer(){<br>
+   console.log(counter);<br>
+   counter++;<br>
+   }<br>
+  setInterval(setTimmer,1000);  <br>
+  
+    clearInterval(id);<br>
+	
+
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

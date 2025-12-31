@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h3>jQuery DOM</h3>
+<p>As compare to JavaScript, its easier to handle and 
+manipulation DOM. JQuery methods are designed in a 
+ manner to handle DOM.
+
+$(document) in jQuery is referring to DOM. We can add element, remove element, add attribute, remove attribute,
+ and change css of an DOM Element using jquery</p>
+ <h4>jQuery DOM</h4>
+ <p> $(document).ready(function(){
+        
+    })</p>
+<h4>.html()</h4>
+<p>	.html() method of jQuery is used to get and set innerHTML of html element. There is no argument required to get innerHTML. But to set
+ innerHTML, we have to pass argument as string text or element.<br>
+<h4>	.html() get</h4>
+   
+
+&lt;p&gt;paragraph&lt;/p&gt;<br>
+&lt;script&gt;  <br>
+    var p=$("p").html<br>
+    console.log(p); <br> 
+&lt;/script&gt;<br>
+</p>
+
+<h4>.html() set</h4><br>
+
+&lt;p&gt; &lt;/p&gt;<br>
+&lt;script&gt;<br>
+ $("p").html("new text");<br>
+	
+$("p").html("new <u>text</u>");	<br>
+&lt;/script&gt;<br>
+<h4>.text()</h4>
+<p>jQuery .text() method is used to get and set text content inside any element including descendants
+</p>
+
+<h4> .text() get</h4>
+ 
+
+ &lt;p&gt;paragraph&lt;/p&gt;<br>
+&lt;script&gt;   <br>
+    var p=$("p").text();<br>
+    console.log(p);<br>
+&lt;/script&gt;<br>
+ 
+ 
+ <h4>.text() set</h4>
+ &lt;p&gt;&lt;/p&gt;<br>
+	&lt;script&gt;<br>
+    $("p").text("new text");<br>
+	&lt;/script&gt;<br>
+<h4>	
+	addClass, removeClass and toggleClass</h4>
+<p>To add, remove and toggle class attribute and its value, jQuery has dedicated methods 
+like addClass, removeClass and toggleClass</p>
+<p>
+<h4>
+.addClass()</h4>
+.addClass() method is used to add class to element. If class is already available, this method will add multiple values for class.
+</p>
+
+&lt;p&gt;shifa&lt;/p&gt;<br>
+&lt;script&gt;  <br> 
+    $('p').addClass('para');<br>
+&lt;/script&gt;<br>
+
+<p>
+<h4>
+.removeClass()</h4>
+.removeClass() method is used to remove existing class from element.
+<br>
+
+  &lt;p class="para"&gt; <br> 
+&lt;script&gt;  <br>  
+    $('p').removeClass('para');<br>
+&lt;/script&gt;<br>
+
+</p>
+<h4>.toggleClass()</h4>
+<p>.toggleClass() method is used to add and remove class name from element. if class is not available, .toggleClass() will add class, but if class 
+name is already there, .toggleClass() will remove class name
+</p>
+    
+
+ &lt;p class="para"&gt;paragraph&lt;/p&gt;<br>
+    
+&lt;script&gt;    <br>
+    $('p').toggleClass('para');<br>
+&lt;/script&gt; <br>
+
+
+	
+	
+</div>
+   </div></div>       
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h3>jQuery Animate</h3>
+<p>The jQuery animate() method is used to create custom animations.</p>
+<p>Syntax:<br>
+
+$(selector).animate({params},speed,callback);<br?
+The required params parameter defines the CSS properties to be animated.
+<br>
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+<br>
+The optional callback parameter is a function to be executed after the animation completes.
+<br>
+The following example demonstrates a simple use of the animate() method; it moves a <div> element to the right, until it has reached a left property of 250px:</p>
+<br>
+
+Example<br>
+$("button").click(function(){<br>
+  $("div").animate({left: '250px'});<br>
+});
+
+
+<h4>jQuery animate() - Manipulate Multiple Properties</h4>
+<p>Notice that multiple properties can be animated at the same time:</p>
+Example<br>
+&lt;script&gt;<br>
+$("button").click(function(){<br>
+  $("div").animate({<br>
+    left: '250px',<br>
+    opacity: '0.5',<br>
+    height: '150px',<br>
+    width: '150px'<br>
+  });<br>
+}); <br>
+&lt;/script&gt;<br>
+
+<h4>jQuery animate() - Using Relative Values</h4>
+<p>It is also possible to define relative values (the value is then relative to the element's current value).
+ This is done by putting += or -= in front of the value:</p>
+ Example<br>
+$("button").click(function(){<br>
+  $("div").animate({<br>
+    left: '250px',<br>
+    height: '+=150px',<br>
+    width: '+=150px'<br>
+  });<br>
+}); <br>
+
+<h4>jQuery animate() - Using Pre-defined Values</h4>
+<p>You can even specify a property's animation value as "show", "hide", or "toggle":</p>
+
+	Example<br>
+$("button").click(function(){<br>
+  $("div").animate({<br>
+    height: 'toggle'<br>
+  });<br>
+});<br>
+
+<h4>jQuery animate() - Uses Queue Functionality</h4>
+<p>
+By default, jQuery comes with queue functionality for animations.
+<br>
+This means that if you write multiple animate() calls after each other, jQuery creates an "internal" queue with these method calls. Then it runs the animate calls ONE by ONE.
+<br>
+So, if you want to perform different animations after each other, we take advantage of the queue functionality:</p>
+<br>
+Example 1<br>
+$("button").click(function(){<br>
+  var div = $("div");<br>
+  div.animate({height: '300px', opacity: '0.4'}, "slow");<br>
+  div.animate({width: '300px', opacity: '0.8'}, "slow");<br>
+  div.animate({height: '100px', opacity: '0.4'}, "slow");<br>
+  div.animate({width: '100px', opacity: '0.8'}, "slow");<br>
+});	<br>
+
+<p>The example below first moves the <div> element to the right, and then increases the font size of the text</p>
+
+Example 2<br>
+$("button").click(function(){<br>
+  var div = $("div");<br>
+  div.animate({left: '100px'}, "slow");<br>
+  div.animate({fontSize: '3em'}, "slow");<br>
+});<br>
+
+
+
+
+
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

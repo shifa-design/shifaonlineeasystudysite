@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-10">
+  <p> CSS Position means where an element should be located.
+  Positions are used to specify the location of an HTML element 
+  on a page layout. By default, all elements in html are positioned 
+  statically, means according to page flow. But using css positions,
+  they can be moved from their position relatively or absolutely      
+             </p>
+<h4>Static Position</h4>
+<p>	Static position is the default position of all HTML elements 
+( except dialog tag ). Static means position according to the HTML Order or position taken by an element by its own.
+
+In static position, there will be no 
+impact when using top, bottom, left, rigth and z-index properties.</p>
+		 
+  <style>
+.box{ 
+	width:200px;
+	height:200px; 
+	background:#333;
+	position:static;
+}
+</style>
+
+	<div class="box">
+		<p> Div with Static Position</p>
+	</div>
+	<p>CSS Properties top, 
+	left, bottom, right and z-index doesn't work with static position			  
+    </p>
+
+<h4>Position Relative</h4>
+<p>Relative Position means position of an HTML element with
+ respect to its actual position. Relative position can
+ overlap over another elements. Relative elements moves, but 
+ their space remains. By default, relative elements are above 
+ static elements on z axis. But of two or more elements are relative 
+and we move them, the last relative element will come on the top(z axis	
+</p>
+<p>We can use top, left, bottom, right
+ and z-index after giving position relative to an HTML element.</p>
+ 
+ 
+ <style>
+.box3{
+    width:200px; 
+    height:200px; 
+    background:#333; 
+    }
+.box4{
+    width:200px; 
+    height:200px; 
+    background:#999; 
+    position:relative; 
+    left:100px;
+    bottom:50px
+}
+</style>
+	
+<div class="box3">Div with position static.</div>
+<div class="box4">Div with relative position, left 200px and bottom 50px</div>
+
+<h4>Position Absolute</h4>
+<p>Position Absolute means position of an HTML element 
+in a specific location outside of normal document flow. 
+Position Absolute remove the element from normal flow and 
+shows all of its own. An element with position absolute can be
+ placed anywhere on the page using properties top, left, right and
+ bottom. Absolute Element can also overlap other elements by using 
+ z-index property.
+
+The left, top, bottom and right of absolute element is 
+calculated by nearest non-static parent</p>
+
+<style>
+.box1{
+    width:200px; 
+    height:200px; 
+    background:#333; 
+}
+.box2{
+    width:200px; 
+    height:50px; 
+    background:#999; 
+    position:absolute; 
+}
+</style>
+	
+<div class="box1">Div with position static</div>
+<div class="box2">Div with relative absolute</div>
+<br><br><br><br>
+<h4>Position Fixed</h4>
+<p>Fixed Position means position of an HTML element with 
+respect to viewport.
+ It doesn't move even if we scroll window up or down.
+For Exp: the Top Menu of this web-page is positioned fixed to the top. It doesn't move even after scrolling down or up
+</p>
+<p>We can use top, left, bottom, right and 
+z-index after giving position fixed to an HTML </p>
+
+</div></div>
+ <style>
+.box11
+	width:200px; 
+	height:200px; 
+	background:#333;
+	position:relative;
+	z-index:1;	
+}
+.box21{
+	width:200px; 
+	height:200px; 
+	background:#999; 
+	position:relative;
+	z-index:2; 
+}
+.box31{
+	width:200px; 
+	height:200px; 
+	background:#ccc; 
+	position:relative;
+	z-index:3;
+}
+</style>
+	
+	<div class="box11">Div with position relative and z-index 1.</div>
+	<div class="box21">Div with position relative and z-index 2;</div>
+	<div class="box31">Div with position relative and z-index 3;</div>
+	
+		
+
+   <div class="col-sm-2">
+</div>   
+             
+    </div>
+    </div>
+                   
+          
+          
+</body>
+</html>

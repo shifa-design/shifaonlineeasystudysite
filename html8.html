@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>HTML Tables</h2>
+<p>HTML tables allow web developers to arrange data into rows and columns.</p>
+
+<h4>Table Tags</h4>
+<p>Here is a list of tags used in table. Table is started with &lt;table&gt; tag. Inside 
+table tag,
+ we can have rows &lt;tr&gt; and columns &lt;td&gt;. Here s a 
+ list of tags in table.</p>
+ 
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Tag Name</th>
+      <th scope="col">Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">&lt;table&gt;</th>
+      <td>	Defines a table Element</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">&lt;tr&gt;</th>
+      <td>	Defines a table row</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">&lt;td&gt;</th>
+      <td>Defines a table cell or table data</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">&lt;th&gt;</th>
+      <td>Defines a table header cell</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">&lt;caption&gt;</th>
+      <td>Defines a table caption</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">&lt;thead&gt;</th>
+      <td>	Groups the header content in a table</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">&lt;tbody&gt;</th>
+      <td>Groups the body content in a table</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">&lt;tfoot&gt;</th>
+      <td>Groups the footer content in a table</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+ 
+<h4>Table Width</h4>
+<p>In HTML table, width attribute was used to set width of 
+table. In HTML5, width attribute is removed. CSS Width property is 
+used to set width of table in html5. Width Attribute can also overflow
+ table in mobile devices as screen width is lesser than table width.</p>
+ <table width="300">
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+        </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+
+<h4>Table Border</h4>
+<p>Table Border attribute is used to display border of table. Border 
+attribute value specify the width of border. 
+Default table border is zero. Table border can have any numeric value</p>
+
+
+<table border="1">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+
+
+ <table border="5">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+   
+
+<h4>Cellspacing</h4>
+<p>cellspacing attribute in table is used to set margin between table 
+cells and table border. Default cellspacing is 2.
+ Using cellspacing attribute, we can change margin between two cells </p>
+
+ <table border="1">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>
+    </tr>
+</table>
+
+
+<table border="1" cellspacing="0">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>    
+    </tr>
+</tbody>
+</table>
+
+
+
+<table border="1" cellspacing="10">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>    
+    </tr>
+</tbody>
+</table>
+
+
+
+<h4>Cellpadding</h4>
+<p>Cellpadding means padding of text or content inside table cell
+ from the table border. Same like css padding. Default cell padding is 1</p>
+ 
+<table border="1">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>
+    </tr>
+</table> 
+
+
+
+<table border="1" cellpadding="0">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>
+    </tr>
+</table>
+
+
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td>S No</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>
+    </tr>
+</table>
+
+
+
+
+<h4>Colspan</h4>
+<p>Colspan attribute is used to merge two or more columns in one.
+ Thus we can have rows with different columns.
+ Minimum value for colspan is 2 and default value is 1.
+
+<table border="1">
+    <tr>
+        <th>S No</th>
+        <th>Name</th>
+        <th>Email Id</th>
+        <th>Score</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+        <td>abc@domain.com</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>xyz</td>
+        <td>xyz@domain.com</td>
+        <td>78</td>
+    </tr>
+    <tr>
+        <td colspan="3>Total</td>
+        <td>166</td>
+     </tr>   
+</table>
+
+
+             
+    </div>
+    </div>
+         
+<h4>Rowspan</h4>
+<p>Rowspan attribute can merge two more rows in a table.
+ Default value of rowspan is 1, and minimum assigned value of rowspan is 2
+</p>
+	<table border="1">
+    <tr>
+        <th>S No</th>
+        <th>Name</th>
+        <th>Class</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+        <td rowspan="2">9th</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>pqr</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>xyz</td>
+        <td rowspan="2">7th</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>xyz</td>
+    </tr>
+    <tr>
+        <td colspan="2">Total</td>
+        <td>4</td>
+    </tr>   
+</table>	    		      
+	
+</div>
+   </div></div>       
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>CSS Transform</h2>
+<p>CSS3 Transform 
+property let you rotate, translate, skew or scale an html element.</p> 
+     
+<p>Till CSS2, we can only translate an element by using position 
+relative and left, top properties. There was no option to rotate,
+ scale and skew
+ an element. But using css3 transform, any transformation is
+ possible	</p>
+ 
+<h2>Transform Properties</h2>
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Property</th>
+      <th scope="col">Value</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Rotate</th>
+      <td>To rotate an element on z-axis, x-axis
+	  and y-axis in degrees between 0-359</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Scale</th>
+      <td>	To scale and element in x and y direction.</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">Skew</th>
+      <td>Skew can bend or change angle of an element in x or y aixs</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">Translate</th>
+      <td>Skew can bend or change angle of an element in x or y aixs</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">Transform Origin</th>
+      <td>Transform Origin can control the origin of transformed element.</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+     <h2>Transform Rotate</h2>
+<p> Transform Rotate property rotate an element in z, y or x 
+axis.
+ Default angle of rotate is 0deg, and can be changed. Inside 
+ parentheses, value is 
+ in deg, exp 90deg, 180 deg etc. Default Transform Origin is
+ center
+ center </p>
+<h4>Transform Rotate Properties</h4>
+<p>transform:rotateZ():
+<br> transform:rotateX();
+<br>transform:rotateY();
+<br>Transform Rotate Example:
+ 
+ 
+<style>
+    .btn1{ transform:rotateZ(0deg); transition:500ms}
+    .btn1:hover{ transform:rotateZ(90deg)}
+</style>
+        
+    <Button class="btn1">Button 1</Button>            
+       
+
+<style>
+    .btn4{ transform:rotateX(0deg); transition:500ms}
+    .btn4:hover{ transform:rotateX(180deg)}
+</style>
+        
+    <Button class="btn4">Button 4</Button>
+   
+
+<style>
+    .btn5{ transform:rotateY(0deg); transition:500ms}
+    .btn5:hover{ transform:rotateY(180deg)}
+</style>
+        
+    <Button class="btn5">Button 5</Button>   
+     
+<h2>Transform Scale</h2>
+<p>Transform Scale or scale property can scale an element 
+by number in x or y axis. Scale can have one or two properties
+ inside parenthesis.Like rotate, scale doesn't effect document
+ flow. If you scale a image inside div, image will
+ overflow div, but others element will remain in same position. 
+</p>
+
+<h2>Transform Scale Properties</h2>
+scale(x)<br>
+scaleY(y)<br>
+<h3>Transform Skew Example</h3>
+
+<style>
+    .btn1{ transform:scale(1)}
+    .btn1:hover{ transform:scale(2)}
+    
+    .btn2{ transform:scale(1)}
+    .btn2:hover{ transform:scale(1,2)}
+</style>
+        
+    <Button class="btn1">Button 1</Button>
+    <Button class="btn2">Button 2</Button>
+
+<h2>Transform Translate</h2>
+<p>Transform Translateor Translate translate or move an 
+element on x or y axis. Value of translate can be in px or %.
+</p>
+<h4>Transform Translate Properties</h4>
+<p>translate(npx)<br>
+translateX(npx)<br>
+translateY(npx)<br>
+</p>
+<h2>Transform Translate Example</h2>
+<style>
+    .btn1{ transform:translate(0px)}
+    .btn1:hover{ transform:translate(20px)}
+    
+    .btn2{ transform:translateY(0px)}
+    .btn2:hover{ transform:translateY(20px)}
+</style>
+        
+    <Button class="btn1">Button 1</Button>
+    <Button class="btn2">Button 2</Button
+
+
+<h2>Transform Origin</h2>
+<p>Transform Origin property change the origin of
+ transformed element. Default Transform origin is center center
+</p>
+
+<p><style>
+    .btn1{ transform:translate(0px); transform-origin:center center}
+    .btn1:hover{ transform:translate(20px)}
+    
+    .btn2{ transform:translateY(0px); transform-origin:left top}
+    .btn2:hover{ transform:translateY(20px)}
+</style>
+        
+    <Button class="btn1">Button 1</Button>
+    <Button class="btn2">Button 2</Button>
+	</p>
+
+
+
+	 
+    </div>
+    </div>
+         
+</div> 
+
+
+ 
+</div>
+   </div></div>       
+</body>
+</html>

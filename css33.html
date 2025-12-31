@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  
+  <style>
+.div1{
+box-shadow:0px 0px 5px 2px red;
+}
+.div2
+{
+box-shadow: -2px -2px 10px 0px blue;
+}
+.div3{
+box-shadow: 2px 2px 10px 0px blue;
+}
+.div4{
+
+box-shadow: 5px 5px 0px 5px aqua;}
+ 
+ .div5{
+ box-shadow: -2px -2px 5px 1px red inset;
+ }
+ .div6{
+ box-shadow: 0px 0px 20px 1px green inset;
+ }
+ 
+ .div7{
+box-shadow: 0px 0px 80px 1px red inset;
+} 
+
+.div8{
+box-shadow: -2px -2px 5px 1px #f00, -4px -4px 5px 0px #00f;
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-10">
+ 
+ <h2>CSS3 Box Shadow</h2>
+ <p>CSS3 Box Shadow is a new property to add shadow effects to
+ any html Element.</p>
+ <p>Unlike border, it not a part of CSS Box Model, thus doesn't
+ effect the layout even if it is bigger in size.
+ Also we can add multiple shadows with different colors and 
+ offsets</p>
+  <h4 class="my-3 py-3">Outer Box Shadow</h4>
+<p>Default box shadow is outer. x-offset and y-offset
+ are compulsory properties, rest all are optional.
+ </p>
+ <div class="div1 my-3 py-3">
+ shadow is equal from all four sides as x-offset and y-offset are zero.
+ Blur is 5px, spread is 2px, and color is red.
+ </div>
+<div class="div2 my-3 py-3">
+shadow is 2px left and 2px top as both values are negative. Blur is 10px,
+ spread is 0px(no solid color of shadow), and color is blue.
+</div>
+<div class="div3 my-3 py-3">
+shadow is 2px from left and 2px from top as both values are positive. Blur is 10px,
+ spread is 0px(no solid color of shadow), and color is blue
+</div>
+<div class="div4 my-3 py-3">
+shadow is 5px from left and 5px from top as both values are positive. Blur is 0px, 
+spread is 5px(only solid color of shadow), and color is aqua
+</div>
+<h2>Inner Box Shadow</h2>
+<p>To use inner box shadow, use inset. Inset is only required if 
+shadow is inside. Bydefault shadow is outside</p>
+<div class="div5 my-3 py-3">
+shadow is 2px from left and 2px from top as both values are
+ positive. Blur is 5px, spread is 1px, color is aqua, and inset 
+ is for inside shadow.
+</div>
+<div class="div6 my-3 py-3">
+shadow is 0px from left and 0px from top as both values are positive. Blur is 20px,
+ spread is 1px, color is white, and inset is for inside shadow
+</div>
+<div class="div7 my-3 py-3">
+Shadow is 0px from left and 0px from top as both values are positive. Blur is
+ 80px, spread is 1px, color is #bbb, and inset is for inside shadow
+</div>
+<h2>Multiple Box Shadows</h2>
+<p>o use Multiple box shadows, use comma (,). Comma
+ works as a separator for multiple box shadows</p>
+<div class="div8 my-3 py-3">
+Shadow is 0px from left and 0px from top as both values are positive. Blur is
+ 80px, spread is 1px, color is #bbb, and inset is for inside shadow
+</div>
+</div>
+          
+   
+ 
+             
+    
+    
+   <div class="col-sm-2">
+          
+    </div>
+    </div>
+                   
+          
+          
+</body>
+</html>

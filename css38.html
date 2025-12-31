@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+  <h2>CSS Animations</h2>
+ <p> CSS3 supports animations by using @keyframes at-rule.
+ @keyframes rule is used to control steps of animation by 
+ defining from and to or percentage of frame in it. To call 
+ animation, animation property is used. Animation can be used 
+ on single or multiple
+ elements with different duration, delay and timing-functions.
+<h2> @keyframe</h2>
+<p>@keyframes rule is used to define steps of animation in
+ declaration block, i.e {}. First define name of @keyframe 
+ rule and then
+ define steps in declaration block.</p>
+<p>
+Steps in animation can be set using from and to. To defined
+ multiple steps, we can also use offset values starting from 
+ 0% (from) to 100%(to). Intermediate values can be 50%, 25% or 
+ so on in sequence.</p>
+<h4>CSS3 Animation Example</h4>
+
+<style>
+.box{
+width:30%;
+height:30%;
+background-color:red;
+border:5px solid red;
+    animation:move 1s linear infinite;
+}
+@keyframes move{
+    0%{ margin-left:0 }
+    100%{ margin-left:200px}
+}
+
+
+
+</style> 
+<div class="box">Box</div>
+<br><br><br><br>
+
+
+
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Animation Properties</th>
+      <th scope="col">value</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">animation-name</th>
+      <td>name of animation</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">animation-duration</th>
+      <td>duration of animation</td>
+     
+    </tr>
+    <tr>
+      <th scope="row">animation-delay</th>
+      <td>	delay before playing animation ( in s or ms)</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">animation-iteration-count</th>
+      <td>	count of animations, could be any number or infinite</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">animation-timing-function</th>
+      <td>linear, ease, ease-in, ease-out, easy-in-out or cubic-bezier</td>
+     
+    </tr>
+	
+	 <tr>
+      <th scope="row">animation-direction</th>
+      <td>initial or alternate</td>
+     
+    </tr>
+	
+	<tr>
+      <th scope="row">animation-play-state</th>
+      <td>running or paused</td>
+     
+    </tr>
+  </tbody>
+  </table>
+</div>
+          
+             
+             
+             
+    </div>
+    </div>
+         
+
+
+
+	 
+    </div>
+    </div>
+         
+</div> 
+
+
+ 
+</div>
+   </div></div>       
+</body>
+</html>

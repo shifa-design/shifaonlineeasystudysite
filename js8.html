@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>Javascript JSON</h2>
+<p>JSON or JavaScript Object Notation is a popular text format. JSON is lightweight and can be used to exchange, interchange and storage data. JSON syntax is both human and machine readable. JSON was build in 2001 but JavaScript starts supporting JSON in ECMA5 ( 2009 onwards ). File extension for JSON file is .json. 
+As compare to XML, JSON is lightweight and easy to parse</p>
+<h4>JSON in JavaScript</h4>
+<p>JSON Object was introduced in JavaScript in ECMA5 (2009). In 
+Javascript, JSON is string representation of JavaScript Object.
+ The key must be quoted in JSON and value can be a string, number,
+ boolean, null, object or array. 
+But functions can't be used in JSON to create methods</p>
+<h5>Supported datatypes in JSON</h5>
+<p>1.String<br>
+2. Numbers<br>
+3. Boolean<br>
+4. Null<br>
+5. Array<br>
+6. Objects<br>
+</p>
+<h4>JSON Object with strings</h4>
+
+&lt;script&gt;<br>
+    var user='{"name":"john","age":"22"}';  <br>                                                     
+&lt;/script&gt;<br>
+
+<h4>JSON Object with numbers</h4>
+&lt;script&gt;<br>
+    var user='{"name":"john","age":22}'; <br>                                                      
+&lt;/script&gt;<br>
+
+<h4>JSON Object with boolean</h4>
+&lt;script&gt;<br>
+    var user='{"name":"john","age":22, "isAlive":true}';  <br>                                                     
+&lt;/script&gt;<br>
+
+<h4>JSON Object with null</h4>
+&lt;script&gt;<br>
+    var user='{"name":"john","age":22, "id":null}'; <br>                                                      
+&lt;/script&gt;<br>
+<h4>JSON Object with Object</h4>
+&lt;script&gt;<br>
+    var user='{"name":"john","dad":{"name":"Mac","age":55}}'; <br>                                                      
+&lt;/script&gt;
+<h4>JSON Object with Array</h4>
+&lt;script&gt;<br>
+    var user='{"name":"john","hobbies":["cricket","football"]}'; <br>                                                      
+&lt;/script&gt;<br>
+
+<h2>JSON Object</h2>
+<p>
+ECMA5 introduced the global JSON Object in javascript. The JSON Object can have two methods, parse and stringify 
+to convert JSON String to object and object to string.</p>
+
+<h4>JSON Methods</h4>
+<h5>1. JSON Parse</h5>
+<p>JSON Parse method is used to convert JSON String to JavaScript Object. The JSON Object is used to convert string to object, followed by parse method.</p>
+
+&lt;script&gt;<br>
+    var user1='{"name":"john","age":"22"}';<br> 
+    var user2=JSON.parse(user1);<br>
+    
+    typeof user1     <br>           
+    user2 instanceOf(Object) <br>         
+&lt;/script&gt;<br>
+
+<h5>2.  JSON Stringify</h5>
+<p>JSON Stringify method is used to convert JS Object to JSON String. The JSON Object is followed by stringify method</p>
+
+&lt;script&gt;<br>
+    var user1={"name":"john","age":"22"};<br>  
+	var user2=JSON.stringify(user1);         <br>
+                               
+&lt;/script&gt;<br>
+
+
+
+
+
+</div>
+   </div></div>       
+</body>
+</html>

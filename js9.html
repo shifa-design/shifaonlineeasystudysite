@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="css/style.css" rel="stylesheet">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <style>
+
+</style>  
+    
+    
+    
+</head>
+<body>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-9">
+<h2>Javascript AJAX</h2>
+<p>Ajax is Asynchronous JavaScript and XML. In JavaScript AJAX is used to fetch data asynchronous from web server without refreshing webpage.</p>
+<h4>JavaScript AJAX benefits</h4>
+
+<p>1. Load data from Web Server (backend).<br>
+2. Update a webpage content without reloading<br>
+3. Load text or media file from server or client.<br>
+4. Send data to server in background.</p>
+
+<h4>1. XMLHttpRequest</h4>
+<p>XMLHttpRequest object is a build in constructor function of 
+javascript. This object can send and receive data from web server. 
+Older I.E. 7 and below use ActiveX Object. But all latest browsers 
+use 
+XMLHttpRequest as it is a web standard now</p>
+
+Example:<br>
+var xhr=new XMLHttpRequest();
+
+<h4>2. onreadystatechange</h4>
+<p>onreadystatechange is a javascript event for XMLHttpRequest constructor object. This event occurs when ready state of ajax changes.
+ A callback function is called using onreadystatechange event</p>
+ Example:<br>
+  var xhr=new XMLHttpRequest();<br>
+    xhr.onreadystatechange=function(){ };<br>
+	
+<h4>3.readystate </h4>
+<p>readystate is a property of XMLHttpRequest object. readystate is an integer value between 0 to 4. This 
+integer value tells the status of request</p>
+
+<p>Example<br>
+0 : Unsent → open method not called yet<br>
+
+1 : Opened → Open method called but send method is not called yet<br>
+
+2 : Headers Received → send method called and http headers and status code received.
+<br>
+3 : Loading → Data is being receiving.
+<br>
+4 : Done → Data loading has been done.
+ <br>
+ <h4>Receive data through ajax</h4>
+ <p>In this example, we will learn how to fetch data from server using ajax. We are fetching data from php.</p>
+ 
+ document.querySelector("#btn").addEventListener("click",function(){
+<br>   
+   var xhr=new XMLHttpRequest();<br>
+    xhr.open("get","data.php",true);<br>
+    xhr.send();<br>
+    
+    xhr.onreadystatechange=function(){<br>
+    if(this.readyState==4 && this.status==200)<br>
+        console.log(this.responseText);<br>
+    }<br>
+    else if(this.readyState==3){<br>
+        console.log("data recieving")<br>
+    }<br>
+    else if(this.readyState==2){<br>
+        console.log("data processing")<br>
+    }<br>
+    else if(this.readyState==1){<br>
+        console.log("data sent")<br>
+    }<br>
+    else if(this.readyState==0){<br>
+        console.log("sending data ")<br>
+    }<br>
+    else{<br>
+    console.log("Unknown Error")<br>
+    }<br>
+})       <br>
+
+ 
+<h4>Get php data through ajax</h4>
+<p>
+In this example, we will learn how to fetch data from .php file using ajax. We are fetching data from php in this example.
+</p>
+Example:<br>
+ 
+
+document.querySelector("#btn").addEventListener("click",function(){<br>
+    var xhr=new XMLHttpRequest();<br>
+    xhr.open("get","avi.php",true);<br>
+    xhr.send();<br>
+    
+    xhr.onreadystatechange=function(){<br>
+    if(this.readyState==4 && this.status==200)<br>
+        var t=this.responseText;<br>
+        var u=JSON.parse(t);<br>
+        for( var i in u ){<br>
+        console.log(i + ", "+ u);<br>
+        }<br>
+        
+    }<br>
+    else if(this.readyState==3){<br>
+        console.log("data recieving")<br>
+    }<br>
+    else if(this.readyState==2){<br>
+        console.log("data processing")<br>
+    }<br>
+    else if(this.readyState==1){<br>
+        console.log("data sent")<br>
+    }<br>
+    else if(this.readyState==0){<br>
+        console.log("sending data ")<br>
+    }<br>
+    else{<br>
+    console.log("Unknown Error");<br>
+    }<br>
+})       <br>
+ 
+ 
+ 
+ 
+</div>
+   </div></div>       
+</body>
+</html>
